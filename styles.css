@@ -64,7 +64,7 @@ body {
 .menu-close {
     position: absolute;
     transform: scale(0, 0);
-    top: -31px;
+    top: 25px;
     right: 6px;
     width: 27px;
 }
@@ -75,7 +75,8 @@ body {
     width: 60%;
     height: 100vh;
     right: 0;
-    top: 3rem;
+    top: -2rem;
+    padding-left: 1rem;
 }
 
  .menu-items li {
@@ -86,6 +87,11 @@ body {
 .menu-items li a {
     text-decoration: none;
     color: #000;
+}
+
+.menu-items li:first-child {
+    position: relative;
+    padding-bottom: 6rem;
 }
 
 .toggle-btn:checked ~ .hamburger-menu .menu-line {
