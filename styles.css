@@ -24,7 +24,7 @@ body {
 }
 
 .main-content {
-  padding: 5rem clamp(2rem, 5vw, 6rem) 0;
+  padding: 1rem clamp(2rem, 8vw, 6rem) 0 ;
 }
 
 .navbar-container {
@@ -153,12 +153,21 @@ body {
 
 /* web3 future section */
 
+.web3-illustration {
+  grid-area: one;
+}
+
 .web3-desktop, .web3-mobile {
   width: 100%;
 }
 
 .web3-future h1 {
   font-size: 3rem;
+  grid-area: two;
+}
+
+.des-container {
+  grid-area: three ;
 }
 
 .web3-future .description {
@@ -180,6 +189,7 @@ article.new-news {
   background-color: var(--very-dark-blue);
   padding: 1rem;
   margin-bottom: 3.5rem;
+  grid-area: four;
 } 
 
 article.new-news h2 {
@@ -231,4 +241,35 @@ article.new-news p {
 
 .tech-news article p {
   line-height: 1.5;
+}
+
+@media screen and (min-width:425px) {
+  .web3-future {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    'one one four'
+    'two two four'
+    'three three four'
+    ;
+  }
+}
+
+  @media screen and (min-width:768px) {
+    .web3-future {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: 
+      'one one four'
+      'two three four'
+      ;
+    }
+
+    .tech-news {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
 }
