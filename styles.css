@@ -24,7 +24,13 @@ body {
 }
 
 .main-content {
-  padding: 1rem clamp(2rem, 8vw, 6rem) 0 ;
+  max-width: 1123px;
+  margin: 5rem auto;
+  padding: 1rem;
+}
+
+p {
+  font-size: 0.9375rem !important;
 }
 
 .navbar-container {
@@ -73,9 +79,10 @@ body {
 
   /* hamburger menu on smaller screens */
 
-@media screen and (max-width:425px) { 
+@media screen and (max-width:578px) { 
   .main-content {
     padding: 2rem 11px;
+    margin: 0;
   }
 
   .toggle-btn {
@@ -162,7 +169,7 @@ body {
 }
 
 .web3-future h1 {
-  font-size: 3rem;
+  font-size: clamp(2.8rem, 4vw, 3.5rem);
   grid-area: two;
 }
 
@@ -182,6 +189,12 @@ body {
   letter-spacing: 4px;
   width: 200px;
   height: 57px;
+}
+
+.btn:hover {
+  background-color: var(--very-dark-blue);
+  color: var(--off-white);
+  cursor: pointer;
 }
 
 
@@ -208,6 +221,11 @@ article.new-news h3 {
   color: var(--off-white);
 }
 
+article.new-news h3:hover {
+  cursor: pointer;
+  color: var(--soft-orange);
+}
+
 article.new-news p {
   color: var(--grayish-blue);
   line-height: 1.8;
@@ -225,7 +243,7 @@ article.new-news p {
 
 .tech-news > article > img {
   flex: 0 1 auto;
-  width: 30%;
+  width: 110px;
 }
 
 .tech-news article .number {
@@ -239,11 +257,16 @@ article.new-news p {
   line-height: 2.5;
 }
 
+.tech-news article h4:hover {
+  color: var(--soft-red);
+  cursor: pointer;
+}
+
 .tech-news article p {
   line-height: 1.5;
 }
 
-@media screen and (min-width:425px) {
+@media screen and (min-width:578px) {
   .web3-future {
     display: grid;
     gap: 1rem;
@@ -253,6 +276,7 @@ article.new-news p {
     'two two four'
     'three three four'
     ;
+    margin-top: 3rem;
   }
 }
 
